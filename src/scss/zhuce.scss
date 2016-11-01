@@ -17,7 +17,7 @@ header{
 .layoyt-body{
     ul li{padding: 10px;;height:34px;display:flex;
          input{width: 0px;text-indent: 8px;flex:1;}
-         button{border: none;width: 0px;}
+         button{border: none;width: 0px;flex: 1;background: $btnColor;color: white;border-radius:5px;font-size: 15px;}
     }
     
     ul:nth-of-type(1) li,ul:nth-of-type(5) li{
@@ -32,11 +32,21 @@ header{
     ul:nth-of-type(6) li{
         button{border: none; border-radius:5px;flex: 1;background: $btnColor;color: white;font-size: 16px;}
     }
-    div a{
+    div{display: flex; 
+        a{
+            flex: 1;
         text-decoration: none;
         padding: 10px;
+        padding-top:8px ;
         color: darkslategray;
         font-size: 14px;
     }
+    a:nth-of-type(1){
+        text-align: left;
+    }
+    a:nth-of-type(2){
+        text-align: right;
+    }
+}
     
 }
