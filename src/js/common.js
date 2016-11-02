@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded',function(){
 	function gaoliang(){
 		for(var i=0;i<5;i++){
 			if($('.foot span').eq(i).find('dt').text()==$('body').attr('name')){
-				$('.foot span').eq(i).css('color',"darkmagenta");
-				$('.foot span').eq(i).find('dt').css('color',"darkmagenta");
+				$('.foot span a').eq(i).css('color',"darkmagenta");
+				$('.foot span a').eq(i).find('dt').css('color',"darkmagenta");
 			}
 		   
 		}

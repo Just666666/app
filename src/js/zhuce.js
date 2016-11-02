@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded',function(){
 			tel=true;
 		}else{
 			alert('请输入正确的手机号码')
+			
 			tel=false;
 
 			
