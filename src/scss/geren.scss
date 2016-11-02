@@ -1,5 +1,6 @@
 //会员头部
-html,body{font-family: '微软雅黑'}
+html,body{font-family: '微软雅黑';}
+body{padding-bottom: 100px;}
 .layout-main{
     height: 85px;background: url(../img/img005.jpg) no-repeat;background-size:cover ;background-position:center;
      a{text-decoration: none;display:flex;color: white;text-align: left;
@@ -39,7 +40,7 @@ html,body{font-family: '微软雅黑'}
            }
            li:nth-of-type(2){text-align: right;
                span:nth-of-type(1){padding:3px;text-align: center; display:inline-block;width:20px;height:20px;border-radius:50% ;background: rgb(142,72,142);}
-               span:nth-of-type(2){color: darkslategray;}
+               span:nth-of-type(2){color: darkslategray;} 
            }
        }
        ul:nth-of-type(2) {li:nth-of-type(1){ 
@@ -63,22 +64,25 @@ html,body{font-family: '微软雅黑'}
    }
    
    .add{
-       margin-top: 20px;
+     margin-top: 20px;
+     margin-bottom: 80px;
        @extend .member-leavel;  
        ul:nth-of-type(1) {
                li:nth-of-type(2){text-align: right;
                span:nth-of-type(1){display: none;}
-               
+               span:nth-of-type(2){color: darkslategray;}
            }
        }
         ul:nth-of-type(2) {
                li:nth-of-type(2){text-align: right;
                span:nth-of-type(1){display: none;}
+               span:nth-of-type(2){color: darkslategray;}
            }
        }
         ul:nth-of-type(3) {
                li:nth-of-type(2){text-align: right;
                span:nth-of-type(1){display: none;}
+               span:nth-of-type(2){color: darkslategray;}
            }
        }
    }
@@ -86,7 +90,7 @@ html,body{font-family: '微软雅黑'}
 }
 //底部
 .foot{
-   height:40px;display: flex;position: absolute;left: 0;right: 0;bottom:0;justify-content:flex-start;text-align: center;background: white;padding-bottom:10px;padding-top: 10px;padding-right: 8px;
+   height:40px;display: flex;position:fixed;left: 0;right:0;bottom:0px;justify-content:flex-start;text-align: center;background: white;padding-bottom:10px;padding-top: 10px;padding-right: 8px;
     span{flex: 1;color: black; ;
      dl{font-size: 18px;
          dt{font-size: 14px;color: darkslategray;}    

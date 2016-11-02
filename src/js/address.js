@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded',function(){
 				eSelect[0].appendChild(option); 
 				
 			})
-			$('select').eq(1).on('singleTap',function(){
+			$('select').eq(0).on('blur',function(){
 			  
 			  for(var i=0;i<res.length-1;i++){ 
 				if($('select').eq(0).val()==res[i].name){
-					$(this).html('');
+					$($('select').eq(1)).html('');
 					var arr=res[i].cities;
 					arr.forEach(function(item,idx){
 						var option=document.createElement('option');
