@@ -10,30 +10,63 @@ body {
   background: #f1f5f6;
   font-family: ' 微软雅黑'; }
 
-header .layout-header {
-  display: flex;
-  justify-content: center;
-  padding-top: 12px;
-  text-align: center;
-  height: 36px;
-  background: #8e488e;
-  font-size: 18px;
-  color: white; }
-  header .layout-header a {
-    flex: 1;
-    text-decoration: none;
-    color: white;
-    font-size: 18px; }
-  header .layout-header a:nth-of-type(1) {
-    text-align: left;
-    padding-left: 8px; }
-  header .layout-header a:nth-of-type(2) {
-    text-align: right;
-    padding-right: 8px; }
-  header .layout-header div {
-    flex: 3;
-    font-size: 16px;
-    font-weight: 700; }
+header {
+  position: relative; }
+  header .layout-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    text-align: center;
+    height: 36px;
+    background: #8e488e;
+    font-size: 18px;
+    color: white; }
+    header .layout-header a {
+      flex: 1;
+      text-decoration: none;
+      color: white;
+      font-size: 18px; }
+    header .layout-header a:nth-of-type(1) {
+      text-align: left;
+      padding-left: 8px; }
+    header .layout-header a:nth-of-type(2) {
+      text-align: right;
+      padding-right: 8px; }
+    header .layout-header div {
+      flex: 3;
+      font-size: 16px;
+      font-weight: 700; }
+  header .caidan {
+    display: none;
+    width: 124px;
+    height: 228px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    color: red;
+    border-radius: 5px;
+    right: 10px;
+    border-top: 3px solid rgba(0, 0, 0, 0.6); }
+    header .caidan ul li {
+      height: 37px;
+      border-bottom: 1px solid darkgray;
+      text-align: center; }
+      header .caidan ul li a {
+        text-decoration: none;
+        display: inline-block;
+        line-height: 36px;
+        text-align: center;
+        color: darkgray;
+        font-weight: 800; }
+    header .caidan ul li:last-child {
+      border: none; }
+  header .caidan::before, header .caidan::after {
+    content: '';
+    position: absolute;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(0, 0, 0, 0.6);
+    right: 8px;
+    top: -10px; }
 
 .layoyt-body ul li {
   padding: 10px;

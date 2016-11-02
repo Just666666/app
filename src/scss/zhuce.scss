@@ -4,13 +4,34 @@ $btnColor:rgb(142,72,142);
 ul{list-style: none;}
 body{background: $bodyColor;font-family: ' 微软雅黑';}
 //头部
-header{
+header{position: relative;
     .layout-header{display: flex;justify-content: center;padding-top: 12px;text-align: center;height: 36px;background: $btnColor;font-size: 18px;color: white;
                   a{flex: 1;text-decoration: none;color: white;font-size: 18px;}
                   a:nth-of-type(1){text-align: left;padding-left: 8px;}
-                  a:nth-of-type(2){text-align: right;padding-right:8px;}
-                  div{flex: 3;font-size: 16px;font-weight: 700;}
+                  a:nth-of-type(2){text-align: right;padding-right:8px;
+                       
+                  }
+                  div{flex:3;font-size: 16px;font-weight: 700;}
     }
+    .caidan{display: none; width: 124px;height: 228px; position: absolute;background: rgba(0,0,0,0.6);color: red;border-radius:5px;right: 10px;border-top:3px solid rgba(0,0,0,0.6) ;
+         ul{
+             li{height: 37px;border-bottom: 1px solid darkgray ;text-align: center;
+                a{text-decoration: none;display: inline-block;line-height: 36px;text-align: center;color: darkgray;font-weight: 800;}
+             }
+             li:last-child{border: none;}
+         }
+    }
+    .caidan::before,.caidan::after{
+        content: '';
+        position: absolute;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom:8px solid rgba(0,0,0,0.6);
+        right: 8px;
+        top:-10px;
+    }
+   
+   
     
 }
 //表单验证
