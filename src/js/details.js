@@ -12,8 +12,11 @@
     //标题
     var $title = $('.title_Price .title');
     var $price = $('.price_lyh');
+    //
+    var $span = $('.goosList span');
+//  console.log($span.eq(0).html())
      //下标
-    var id =0;
+    var id =5;
  	$.ajax({
  		type:"get",
  		url:"./../data/details.json",
@@ -25,6 +28,11 @@
    				$div[3].innerHTML ='<img src='+item[id].images4+'/>';
    				$div[4].innerHTML ='<img src='+item[id].images5+'/>';
    				$div[5].innerHTML ='<img src='+item[id].images6+'/>';
+   				$span.eq(0).html(item[id].p1);
+   				$span.eq(1).html(item[id].p2);
+   				$span.eq(2).html(item[id].p3);
+   				$span.eq(3).html(item[id].p4);
+   				$span.eq(4).html(item[id].p5);
    				$title.html(item[id].title);
    				$price.html('&yen;'+item[id].price);
    				obj = {"price":item.price,"image":item[id].images1,"title":item[id].title};
@@ -61,7 +69,7 @@
    var bGoods = true;
   
    $btngroud.eq(1).on('singleTap',function(){
-   	   
+ 
         obj.num = 1;
 		GoodsData =localStorage.getItem("GoodsData")? JSON.parse(localStorage.getItem("GoodsData")):[];
 		$.each(GoodsData, function(idx,item){
@@ -83,8 +91,7 @@
 		$count.html(AllCount);
     	localStorage.setItem("GoodsData",JSON.stringify(GoodsData))
     	
-    	alert('添加货物成功');
-//  	 $(this).preventDefault();
+    	alert("成功添加商品！")
     })
  	
  	//获取节点，详情与评论切换
@@ -100,6 +107,16 @@
     		$('.detail_Content').hide();
     		$('.review').show();	
     	}	
+    })
+    //左右划进行切换   进行评论和详情页的切换
+    $('.all_content').on('swipeLeft',function(){
+    	$btnChanges.eq(1).addClass('active').siblings('a').removeClass('active');
+    	$('.detail_Content').hide();
+    	$('.review').show();	
+    }).on('swipeRight',function(){
+    	$btnChanges.eq(0).addClass('active').siblings('a').removeClass('active');
+    	$('.detail_Content').show();//详情显示
+    	$('.review').hide();	//评论隐藏
     })
     
     
