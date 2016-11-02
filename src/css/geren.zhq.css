@@ -150,6 +150,11 @@ body {
   padding-bottom: 10px;
   padding-top: 10px;
   padding-right: 8px; }
+  .foot a {
+    text-decoration: none;
+    color: darkslategrey; }
+  .foot a:hover {
+    color: darkorange; }
   .foot span {
     flex: 1;
     color: black; }

@@ -89,7 +89,8 @@ body{padding-bottom: 100px;}
    
 }
 //底部
-.foot{
+.foot{a{text-decoration: none;color: darkslategrey;}
+      a:hover{color: darkorange;}
    height:40px;display: flex;position:fixed;left: 0;right:0;bottom:0px;justify-content:flex-start;text-align: center;background: white;padding-bottom:10px;padding-top: 10px;padding-right: 8px;
     span{flex: 1;color: black; ;
      dl{font-size: 18px;
