@@ -119,7 +119,7 @@
 	    		$('<span/>').html(item.name).appendTo($NameDiv);
 	    		$('<time/>').html(data.toLocaleDateString()+data.toLocaleTimeString()).appendTo($NameDiv);
 	    		for(var i= 0;i <parseInt(item.good);i++){
-	    	    	$('<span/>').addClass('iconfont icon-star').appendTo($MainView);
+	    	    	$('<span/>').addClass('iconfont icon-xing').appendTo($MainView);
 	    		}
 	    		$('<p/>').addClass('view').html(item.view).appendTo($MainView);
 	    		$('<p/>').addClass('time').html("购买日期:"+item.time).appendTo($MainView);
