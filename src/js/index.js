@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded",function(){
     	loop:true
     });
     
+//  $("footer").load("html/personal_information(个人信息).html footer");
+	
 //  //json数据加载
 //	var xhr=new XMLHttpRequest();
 //	
@@ -125,6 +127,5 @@ document.addEventListener("DOMContentLoaded",function(){
 			obackToTop.style.opacity=0;
 		}
 	}
-	
 
 });

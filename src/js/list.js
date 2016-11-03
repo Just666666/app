@@ -25,12 +25,13 @@ document.addEventListener("DOMContentLoaded",function(){
 					var $li=$("<li/>");
 					var $img=$("<img/>");
 					var $typeExplain=$("<span/>");
+					var $a=$("<a/>")
 					
 					$img.attr({src:item.url}).addClass("img");
-					$typeExplain.html(item.typeExplain).addClass("typeExplain");
+					$a.attr({href:"#"}).addClass("json_a").append($img).appendTo($li);
+					$typeExplain.html(item.typeExplain).addClass("typeExplain").appendTo($li);
 				    
-				    $li.addClass("json_li").append($img);
-				    $li.append($typeExplain);
+					$li.addClass("json_li");
 				    $ul.addClass("json_1").append($li);
 				
 				})
