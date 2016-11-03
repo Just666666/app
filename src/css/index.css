@@ -4,7 +4,6 @@ body {
   padding: 0;
   background: #f1f5f6;
   font-family: "微软雅黑";
-  font-family: "微软雅黑";
 }
 
 ul {
@@ -46,7 +45,7 @@ header span:first-child {
   display: block;
 }
 
-.iconfont {
+.icon-sousuo {
   font-size: 20px;
   margin-right: 12px;
   position: absolute;
