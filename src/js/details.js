@@ -35,7 +35,7 @@
    				$span.eq(4).html(item[id].p5);
    				$title.html(item[id].title);
    				$price.html('&yen;'+item[id].price);
-   				obj = {"price":item[id].price,"image":item[id].images1,"title":item[id].title};
+   				obj = {"price":item.price,"image":item[id].images1,"title":item[id].title};
  			  //轮播图  利用swiper插件
  			  var mySwiper = new Swiper ('#concansel', {
 		 		pagination: '.swiper-pagination',
@@ -97,29 +97,29 @@
  	//获取节点，详情与评论切换
  	
  	var $btnChanges = $('.search-bar div .tag');
- 	var flag= false;
- 	//详情页和评论页左右切换
- 	var mySwiper1 = new Swiper ('#all_content', {
-		         freeMode : false, 
-		         onSlideChangeStart: function(){ 
-		         if(!flag){
-		         	 $btnChanges.eq(1).addClass('active').siblings('a').removeClass('active');
-		             flag =!flag;
-		         }else{
-		         	$btnChanges.eq(0).addClass('active').siblings('a').removeClass('active');
-		             flag =!flag;
-		         }
-			    
-			 }
-		 	})
- 	//点击切换
+    //事件监听
     $btnChanges.on('singleTap',function(){
-    	flag =!flag;
-    	var index = $(this).index();  //获取下标
     	$(this).addClass('active').siblings('a').removeClass('active');
-    	mySwiper1.slideTo(index, 1000, false);
+    	if($(this).html() === '详情'){
+    		$('.detail_Content').show();//详情显示
+    		$('.review').hide();	//评论隐藏
+    	}else{  
+    		$('.detail_Content').hide();
+    		$('.review').show();	
+    	}	
     })
-
+    //左右划进行切换   进行评论和详情页的切换
+    $('.all_content').on('swipeLeft',function(){
+    	$btnChanges.eq(1).addClass('active').siblings('a').removeClass('active');
+    	$('.detail_Content').hide();
+    	$('.review').show();	
+    }).on('swipeRight',function(){
+    	$btnChanges.eq(0).addClass('active').siblings('a').removeClass('active');
+    	$('.detail_Content').show();//详情显示
+    	$('.review').hide();	//评论隐藏
+    })
+    
+    
     //评论内容获取
     var data = new Date();
     var $list = $('.review_List');
@@ -148,22 +148,5 @@
     		
     	}
     })
-    
-    $(window).on('scroll',function(){
-		var scrollTop = $(window).scrollTop();
-
-		//显示回到顶部按钮
-		if(scrollTop >= 500){
-			$('.scroll_top').show();
-		}else{
-			$('.scroll_top').hide();
-		}
-
-	});
-
-  //回到顶部
-   $('.scroll_top').on('singleTap',function(){
-		$('html,body').animate({'scrollTop':0});
-	});
 
  })

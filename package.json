@@ -1,0 +1,28 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "移动端项目app",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Just666666/app.git"
+  },
+  "keywords": [
+    "build",
+    "npm",
+    "node.js"
+  ],
+  "author": "liao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Just666666/app/issues"
+  },
+  "homepage": "https://github.com/Just666666/app#readme"
+}

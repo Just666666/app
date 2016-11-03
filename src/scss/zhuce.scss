@@ -13,7 +13,7 @@ header{position: relative;
                   }
                   div{flex:3;font-size: 16px;font-weight: 700;}
     }
-    .caidan{display: none; width: 124px;height: 228px; position: absolute;background: rgba(0,0,0,0.6);color: red;border-radius:5px;right: 10px;border-top:3px solid rgba(0,0,0,0.6) ;
+    .caidan{z-index: 3; display: none; width: 124px;height: 228px; position: absolute;background: rgba(0,0,0,0.6);color: red;border-radius:5px;right: 10px;border-top:3px solid rgba(0,0,0,0.6) ;
          ul{
              li{height: 37px;border-bottom: 1px solid darkgray ;text-align: center;
                 a{text-decoration: none;display: inline-block;line-height: 36px;text-align: center;color: darkgray;font-weight: 800;}
@@ -36,7 +36,8 @@ header{position: relative;
 }
 //表单验证
 .layoyt-body{
-    ul li{padding: 10px;;height:34px;display:flex;
+    ul li{padding: 10px;;height:34px;display:flex;position: relative;
+         div{position: absolute;right: 11px;top: 11px;background:darksalmon;height: 32px;text-align: center;line-height: 32px;padding-right: 5px;padding-left: 5px;color:white;opacity: 0.7;display: none;}
          input{width: 0px;text-indent: 8px;flex:1;}
          button{border: none;width: 0px;flex: 1;background: $btnColor;color: white;border-radius:5px;font-size: 15px;}
     }
@@ -47,6 +48,7 @@ header{position: relative;
             input:nth-of-type(2){flex:2;}
     }
     ul:nth-of-type(2) li{
+        div{right:40% ;}
         input{flex:3;}
         button{flex:2;border-radius:0 5px 5px 0 ;color: white;font-size: 16px;background: $btnColor;}
     }

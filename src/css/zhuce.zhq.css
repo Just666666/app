@@ -37,6 +37,7 @@ header {
       font-size: 16px;
       font-weight: 700; }
   header .caidan {
+    z-index: 3;
     display: none;
     width: 124px;
     height: 228px;
@@ -71,7 +72,21 @@ header {
 .layoyt-body ul li {
   padding: 10px;
   height: 34px;
-  display: flex; }
+  display: flex;
+  position: relative; }
+  .layoyt-body ul li div {
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    background: darksalmon;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: white;
+    opacity: 0.7;
+    display: none; }
   .layoyt-body ul li input {
     width: 0px;
     text-indent: 8px;
@@ -90,6 +105,9 @@ header {
 
 .layoyt-body ul:nth-of-type(1) li input:nth-of-type(2), .layoyt-body ul:nth-of-type(5) li input:nth-of-type(2) {
   flex: 2; }
+
+.layoyt-body ul:nth-of-type(2) li div {
+  right: 40%; }
 
 .layoyt-body ul:nth-of-type(2) li input {
   flex: 3; }
