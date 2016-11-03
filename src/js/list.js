@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded",function(){
 					var $a=$("<a/>")
 					
 					$img.attr({src:item.url}).addClass("img");
-					$a.attr({href:"#"}).addClass("json_a").append($img).appendTo($li);
+					$a.attr({href:item.href}).addClass("json_a").append($img).appendTo($li);
 					$typeExplain.html(item.typeExplain).addClass("typeExplain").appendTo($li);
 				    
 					$li.addClass("json_li");
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded",function(){
 		//根据索引加载不同的数据
 		var $nav_list=$(".nav_list");
 		
-		$nav_list.on("click","li",function(){
+		$nav_list.on("singleTap","li",function(){
 			var $ul_load=$(".json_1");
 			$ul_load.empty();
 			
