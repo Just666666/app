@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded",function(){
 		$(this).addClass("li_active");
 	});
 	
+	$(".menudata").on('singleTap',function(){
+		$('.menu').toggle();
+	});
 });
 
 //json数据加载

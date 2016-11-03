@@ -19,7 +19,7 @@ img {
 header {
   width: 100%;
   overflow: hidden;
-  height: 54px;
+  height: 48px;
   position: fixed;
   top: 0;
   left: 0;
@@ -29,13 +29,13 @@ header {
 header div {
   width: 100%;
   background: #8e488e;
-  padding: 15px 0;
+  padding: 13px 0;
   overflow: hidden;
   position: relative;
 }
 
 header span {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
 }
 
@@ -46,10 +46,10 @@ header span:first-child {
 }
 
 .icon-sousuo {
-  font-size: 20px;
+  font-size: 22px;
   margin-right: 12px;
   position: absolute;
-  top: 17px;
+  top: 12px;
   right: 0;
 }
 

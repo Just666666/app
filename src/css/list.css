@@ -16,36 +16,35 @@ li {
 }
 
 a {
-  text-decoration: none;
   display: block;
+  text-decoration: none;
 }
 
 header {
   width: 100%;
-  overflow: hidden;
-  height: 54px;
+  height: 48px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
 }
 
-header div {
+header .header_top {
   width: 100%;
   background: #8e488e;
-  padding: 15px 0;
+  padding: 13px 0;
   display: flex;
   justify-content: space-between;
 }
 
 header span {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
 }
 
 header .iconfont {
-  font-size: 20px;
-  margin-right: 12px;
+  font-size: 18px;
+  margin-right: 6px;
   margin-left: 10px;
 }
 
@@ -126,4 +125,49 @@ nav ul li {
   text-align: center;
   width: 100%;
   display: block;
+}
+
+.header_data {
+  position: relative;
+}
+
+.menu {
+  display: none;
+  width: 124px;
+  height: 228px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: red;
+  border-radius: 5px;
+  right: 10px;
+  border-top: 3px solid rgba(0, 0, 0, 0.6);
+}
+
+.menu ul li {
+  height: 37px;
+  border-bottom: 1px solid darkgray;
+  text-align: center;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 36px;
+  text-align: center;
+  color: darkgray;
+  font-weight: 800;
+}
+
+.menu ul li:last-child {
+  border: none;
+}
+
+.menu::before, .menu::after {
+  content: '';
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.6);
+  right: 8px;
+  top: -10px;
 }
