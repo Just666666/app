@@ -16,7 +16,13 @@
     var $span = $('.goosList span');
 //  console.log($span.eq(0).html())
      //下标
-    var id =5;
+     var id;
+     if(localStorage.getItem("id")){
+     	id=parseInt(localStorage.getItem("id"));
+     }else{
+     	id = 0;
+     }
+     
  	$.ajax({
  		type:"get",
  		url:"./../data/details.json",
