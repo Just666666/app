@@ -59,6 +59,12 @@ document.addEventListener('DOMContentLoaded',function(){
     
     //提交
     $('.layoyt-body button').eq(1).on('singleTap',function(){
+    	if($('.layoyt-body input').eq(1).val()=="" || $('.layoyt-body input').eq(2).val()==""  || $('.layoyt-body input').eq(3).val()==""  ||   $('.layoyt-body input').eq(4).val()==""  ){
+    		$('.layoyt-body li div').show();
+    	}else{
+    		$('.layoyt-body li div').hide();
+    	}
+    	
     	if(tel && yzm && psw && queren){
     		console.log('1111');
     		var user={};
@@ -69,9 +75,9 @@ document.addEventListener('DOMContentLoaded',function(){
     				local.splice(i,i+1);
     			}
     		}
-    		local.push(user);
+    		local.unshift(user);
     		localStorage.setItem('local',JSON.stringify(local));
-    		open('http://127.0.0.1:8020/app/app/src/html/logins(%E7%99%BB%E5%85%A5).html');
+    		open('logins.html');
     	}
     	
     })
