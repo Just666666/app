@@ -13,7 +13,7 @@ header{position: relative;
                   }
                   div{flex:3;font-size: 16px;font-weight: 700;}
     }
-    .caidan{display: none; width: 124px;height: 228px; position: absolute;background: rgba(0,0,0,0.6);color: red;border-radius:5px;right: 10px;border-top:3px solid rgba(0,0,0,0.6) ;
+    .caidan{z-index: 3; display: none; width: 124px;height: 228px; position: absolute;background: rgba(0,0,0,0.6);color: red;border-radius:5px;right: 10px;border-top:3px solid rgba(0,0,0,0.6) ;
          ul{
              li{height: 37px;border-bottom: 1px solid darkgray ;text-align: center;
                 a{text-decoration: none;display: inline-block;line-height: 36px;text-align: center;color: darkgray;font-weight: 800;}

@@ -37,6 +37,7 @@ header {
       font-size: 16px;
       font-weight: 700; }
   header .caidan {
+    z-index: 3;
     display: none;
     width: 124px;
     height: 228px;
