@@ -30,15 +30,24 @@ document.addEventListener("DOMContentLoaded",function(){
 					var $typeExplain=$("<span/>");
 					var $a=$("<a/>")
 					
-					$img.attr({src:item.url}).addClass("img");
-					$a.attr({href:item.href}).addClass("json_a").append($img).appendTo($li);
-					$typeExplain.html(item.typeExplain).addClass("typeExplain").appendTo($li);
+					$img.attr({src:item.url}).addClass("img").appendTo($a);
+					
+					//将商品id存入本地存储
+					$a.on("touchstart",function(){
+						$(this).attr({id:"idname"}).attr({href:item.href}).addClass("json_a");
+						var id=$(this).parent().index();
+						localStorage.setItem("id",id);
+					
+					});
+					
+					$typeExplain.html(item.typeExplain).addClass("typeExplain").appendTo($a);
 				    
-					$li.addClass("json_li");
+					$li.addClass("json_li").append($a);
 				    $ul.addClass("json_1").append($li);
 				
 				})
 				$ul.appendTo($list_json);
+				
 			}
 		});
 		//加载数据
@@ -78,13 +87,7 @@ document.addEventListener("DOMContentLoaded",function(){
 //				}
 //			});	
 			
-		})
-		
-		//将商品id存入本地存储
-		$list_json.on("singleTap","li",function(){
-			var id=$(this).index();
-			localStorage.setItem("id",id);
-		});
-
+	})
+        
 	})
 });

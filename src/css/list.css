@@ -112,7 +112,7 @@ nav ul li {
 
 .list_json .json_a {
   width: 100%;
-  height: 70px;
+  height: auto;
 }
 
 .list_json .img {
@@ -125,6 +125,7 @@ nav ul li {
   text-align: center;
   width: 100%;
   display: block;
+  color: black;
 }
 
 .header_data {
