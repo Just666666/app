@@ -1,12 +1,18 @@
 {
-  "name": "app",
+  "name": "oyamat",
   "version": "1.0.0",
-  "description": "移动端项目app",
+  "description": "oya商城",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,11 +21,11 @@
     "url": "git+https://github.com/Just666666/app.git"
   },
   "keywords": [
-    "build",
+    "gulp",
     "npm",
-    "node.js"
+    "nodejs"
   ],
-  "author": "liao",
+  "author": "andy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Just666666/app/issues"
